@@ -18,9 +18,13 @@ const speedReducer = (state = 0, action) => {
   return state;
 };
 
-const passengerReducer = (state = '', action) => {
+const passengerReducer = (
+  state = [],
+
+  action
+) => {
   if (action.type === 'ADD_PASSENGER') {
-    return action.payload;
+    return [...state, action.payload];
   }
 
   return state;
