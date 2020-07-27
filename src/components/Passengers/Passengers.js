@@ -29,7 +29,6 @@ class Passengers extends Component {
   render() {
     const passengerArray = this.props.store.passengerReducer.map(
       (item, index) => {
-        console.log(item);
         return <li key={index}>{item.passengerEntered}</li>;
       }
     );
