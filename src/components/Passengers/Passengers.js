@@ -21,6 +21,9 @@ class Passengers extends Component {
       type: 'ADD_PASSENGER',
       payload: this.state,
     });
+    this.setState({
+      passengerEntered: '',
+    });
   };
 
   render() {
@@ -39,6 +42,7 @@ class Passengers extends Component {
           type="text"
           name="name"
           placeholder="Enter Name"
+          value={this.state.passengerEntered}
         />
         <button onClick={this.onAddPassengerClick}>Add Passenger</button>
 
