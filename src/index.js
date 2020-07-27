@@ -11,7 +11,7 @@ import logger from 'redux-logger';
 const speedReducer = (state = 0, action) => {
   if (action.type === 'INCREASE_SPEED') {
     return state + 1;
-  } else if (action.type === 'DECREASE_SPEED') {
+  } else if (action.type === 'DECREASE_SPEED' && state > 0) {
     return state - 1;
   }
 
