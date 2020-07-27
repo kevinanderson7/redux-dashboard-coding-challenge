@@ -19,11 +19,13 @@ class SpeedControl extends Component {
         <h2>Speed Control</h2>
 
         <button onClick={this.handleClickIncrease}>Increase Speed</button>
-        <p>SPEED: GOES HERE</p>
+        <p>{this.props.store.speedReducer}</p>
         <button onClick={this.handleClickDecrease}>Decrease Speed</button>
       </div>
     );
   }
 }
 
-export default connect()(SpeedControl);
+const mapStoreToProps = (store) => ({ store });
+
+export default connect(mapStoreToProps)(SpeedControl);
