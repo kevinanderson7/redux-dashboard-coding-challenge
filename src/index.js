@@ -19,7 +19,7 @@ const speedReducer = (state = 0, action) => {
 };
 
 const passengerReducer = (
-  state = [],
+  state = [{ passengerEntered: 'Kevin' }],
 
   action
 ) => {
